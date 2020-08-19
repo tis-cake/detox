@@ -138,9 +138,12 @@ html .desktop-flex {
   display: flex;
 }
 
-// .phone-mask:-moz-submit-invalid,
-.phone-mask:-moz-ui-invalid {
+.js-phone-mask:-moz-ui-invalid {
   box-shadow: none;
+}
+
+.main {
+  overflow: hidden;
 }
 
 @media (max-width: @tablet-width) {
@@ -148,10 +151,10 @@ html .desktop-flex {
     --container-padding-block: 3.5rem;
   }
 
-  .main {
-    overflow: hidden;
-    margin-top: 11rem;
-  }
+  // .main {
+  //   overflow: hidden;
+  //   margin-top: 11rem;
+  // }
 
   .overlay {
     // background-color: @bg;

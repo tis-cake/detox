@@ -1,4 +1,5 @@
 .service-preview {
+  position: relative;
   padding-top: 130px;
   padding-bottom: 130px;
 }
@@ -129,4 +130,14 @@
   font-weight: @heavy;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.service-preview__figure {
+  left: auto;
+  right: 0;
+  &::before {
+    top: -178px;
+    left: initial;
+    right: -490px;
+  }
 }

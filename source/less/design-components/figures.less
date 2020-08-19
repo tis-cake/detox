@@ -1,0 +1,45 @@
+.figure {
+  position: absolute;
+  z-index: -1;
+
+  &::before {
+    z-index: 0;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &-1::before {
+    // top: -16px;
+    // left: -124px;
+    width: 237px;
+    height: 262px;
+    background-image: url('../img/svg/figures/purple-1.svg');
+  }
+
+  &-2::before {
+    width: 692px;
+    height: 545px;
+    background-image: url('../img/svg/figures/green-2.svg');
+  }
+}
+
+.figure-dots {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+
+    width: 300px;
+    height: 258px;
+    background-image: url('../img/svg/figures/dots.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
