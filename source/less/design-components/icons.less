@@ -1,0 +1,168 @@
+.icon-search {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.icon-close {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+// .icon-region-1 {
+//   width: 1.8rem;
+//   height: 2.3rem;
+// }
+
+// #icon-region-1 {
+//   path {
+//     // mask: url(../#mask-icon-region-1);
+//     // mask: url(../img/sprite.svg#mask-icon-region-1);
+//   }
+// }
+
+.icon-region-2 {
+  width: 2.6rem;
+  height: 3.2rem;
+}
+
+.icon-arrow {
+  width: 3.1rem;
+  height: 1.1rem;
+}
+
+.icon-arrow-short {
+  width: 1.3rem;
+  height: 2.5rem;
+}
+
+.icon-compare {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-logo-star {}
+
+// меняем цвет через color, так как внутри currentColor
+// #icon-region-1 {
+  // transition: @s;
+  // path {
+    // fill: red;
+  // }
+  // circle {
+    // stroke: red;
+  // }
+// }
+
+// меняем цвет через color, так как внутри currentColor
+// #icon-region-2 {
+  // transition: @s;
+  // fill: red;
+  // path {
+    // stroke: red;
+  // }
+// }
+
+.icon-tel {
+  color: currentColor;
+  --btn-tel-bg: #fff;
+
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.icon-shield {
+  width: 5.5rem;
+  height: 6.2rem;
+}
+
+// Фон иконки-щита: при hover меняются координаты translate в css-переменной,
+// (хотя сам элемент в shadow-root).
+// Для хрома нужно инлайново в спрайт, однако связка use + var + transition в нём
+// не поддерживается (на июль 2020), только use + var. Инлайново в html работает.
+#icon-shield-bg {
+  transition: @s;
+  transform: var(--icon-shield-translate);
+}
+
+// html {
+//   --icon-shield-translate: translate(0);
+// }
+
+.aside-check {
+  &:hover {
+    --icon-shield-translate: translate(-0.5rem, -0.5rem);
+    // chrome (без transition)
+    // --icon-shield-translate: translate(-5%, -5%);
+  }
+}
+
+.icon-download {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.icon-triangle-bottom {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: @light-gray;
+
+  transition: @s;
+}
+
+// .active .icon-triangle-bottom,
+.filter__options.active .icon-triangle-bottom,
+.active.icon-triangle-bottom {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.icon-star {
+  width: 2.8rem;
+  height: 2.8rem;
+
+  transition: @s;
+  fill: transparent;
+  stroke: #ADB9D9;
+}
+
+@media (max-width: @tablet-width) {
+  .icon-arrow-short {
+    width: 1.1rem;
+    height: 1.2rem;
+  }
+
+  .icon-region-2 {
+    width: 2.2rem;
+    height: 2.8rem;
+  }
+
+  .icon-compare {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .icon-shield {
+    width: 3.7rem;
+    height: 4.6rem;
+  }
+
+  .icon-download {
+    // width: 1.8rem;
+    // height: 1.8rem;
+  }
+
+  .icon-triangle-bottom {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .icon-star {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}

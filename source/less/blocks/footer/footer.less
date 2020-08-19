@@ -1,0 +1,143 @@
+.footer {
+  padding-top: 8.5rem;
+  padding-bottom: 8.5rem;
+  background-color: #F8FBFF;
+
+  a:hover,
+  a:focus {
+    opacity: @opacity-hover;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__list {
+  &--right {
+    text-align: right;
+  }
+}
+
+.footer__item,
+.footer__item-link {
+  font-size: 1.8rem;
+  color: @dark-gray;
+}
+
+.footer__item {
+  margin-bottom: 1.6rem;
+  &--light {
+    color: @light-gray;
+  }
+}
+
+.footer__link {}
+
+.footer__center-column {
+  position: relative;
+  text-align: center;
+}
+
+.footer__logo {}
+
+.footer__text-wrap {
+  position: relative;
+
+  margin-top: -2.4rem;
+  margin-left: auto;
+  margin-bottom: 1.9rem;
+
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
+.footer__text-item {
+  font-weight: 700;
+  color: @dark-gray;
+  &--gray {
+    color: @light-gray;
+    font-weight: 300;
+  }
+}
+
+.footer__tel-link {
+  margin-bottom: 2.3rem;
+  font-size: 2.7rem;
+}
+
+.footer__link-modal-region {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.7rem;
+
+  .btn-region-1__icon {
+    color: @light-gray;
+  }
+
+  &::before {
+    top: -0.5rem;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .footer {
+    // padding-top: 8.5rem;
+    // padding-bottom: 8.5rem;
+    // background-color: #F8FBFF;
+  }
+
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer__list {
+    width: 45%;
+    &--right {
+      text-align: left;
+    }
+  }
+
+  .footer__item,
+  .footer__item-link {
+    font-size: 1.5rem;
+  }
+
+  .footer__item {
+    margin-bottom: 1.9rem;
+  }
+
+  .footer__link {}
+
+  .footer__center-column {
+    order: 1;
+    width: 100%;
+  }
+
+  .footer__logo {}
+
+  .footer__text-wrap {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 1.9rem;
+  }
+
+  .footer__tel-link {
+    margin-bottom: 2.7rem;
+  }
+
+  .footer__link-modal-region {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
+
+    .btn-region-1__icon {
+      color: @light-gray;
+    }
+
+    &::before {
+      top: -0.5rem;
+    }
+  }
+}

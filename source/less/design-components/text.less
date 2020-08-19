@@ -1,0 +1,52 @@
+.caption {
+  text-transform: uppercase;
+  font-weight: @medium;
+  &--heavy {
+    font-weight: @heavy;
+  }
+  &--large {
+    font-size: 20px;
+  }
+}
+
+.title {
+  font-weight: @heavy;
+  font-size: 50px;
+  // line-height: 60px;
+  &--large {
+    font-size: 60px;
+    line-height: 65px;
+  }
+}
+
+.desc {
+  font-size: 19px;
+  &--large {
+    font-size: 21px;
+  }
+  // color: @light-gray;
+  // line-height: 2.7rem;
+}
+
+@media (max-width: @tablet-width) {
+
+  .section-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    &--small {
+      // font-size: 3.5rem;
+    }
+    &--big {
+      // font-size: 4rem;
+    }
+  }
+
+  .section-desc {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  .DaVinci {
+    font-size: 3rem;
+  }
+}
