@@ -1,4 +1,6 @@
 .service-preview {
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 .service-preview__text-wrap {
@@ -21,9 +23,8 @@
 
 .service-preview__list {
   display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(237px, 1fr));
   grid-template-columns: repeat(7, 165px);
-  grid-column-gap: 28px;
+  gap: 28px;
 }
 
 .service-preview__item {
@@ -46,7 +47,6 @@
 
   &:hover,
   &:focus {
-    // box-shadow: 21px 28px 34px 10px rgba(5, 30, 56, 0.07);
     box-shadow: 21px 28px 54px 5px rgba(5, 30, 56, 0.1);
   }
 }
@@ -116,7 +116,7 @@
   }
   &:nth-child(5) {
     .service-preview__img-wrap::before {
-      background-image: url('../img/svg/icons-bg/t-l-light-green.svg');
+      background-image: url('../img/svg/icons-bg/t-l-light-green-1.svg');
     }
   }
 }
