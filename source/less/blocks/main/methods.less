@@ -1,0 +1,73 @@
+.methods {
+  padding-top: 141px;
+  padding-bottom: 141px;
+}
+
+.methods__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.methods__content-wrap {
+  width: 334px;
+}
+
+.methods__caption {
+  margin-bottom: 26px;
+}
+
+.methods__title {
+  margin-bottom: 33px;
+}
+
+.methods__desc {}
+
+.methods__btn {
+  margin-top: 24px;
+}
+
+.methods__list {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  column-gap: 74px;
+  row-gap: 84px;
+
+  counter-reset: methodsItem;
+}
+
+.methods__item {
+  position: relative;
+  padding-top: 53px;
+
+  &::before {
+    counter-increment: methodsItem;
+    content: counter(methodsItem, decimal-leading-zero);
+
+    position: absolute;
+    top: -4px;
+    left: 4px;
+
+    font-weight: @heavy;
+    font-size: 35px;
+  }
+
+  &:nth-child(1)::before,
+  &:nth-child(4)::before {
+    color: @blue;
+  }
+
+  &:nth-child(2)::before {
+    color: @green;
+  }
+
+  &:nth-child(3)::before {
+    color: @light-green;
+  }
+}
+
+.methods__item-title {
+  margin-bottom: 21px;
+}
+
+.methods__item-desc {
+}
