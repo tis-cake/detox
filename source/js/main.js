@@ -1,3 +1,5 @@
+const width = $(window).width();
+
 // мобильное меню
 $(document).ready(function () {
   $('.menu-toggle').click(function () {
@@ -27,22 +29,65 @@ $(document).ready(function () {
 });
 
 // доступное навигационное меню (enter и пробел)
-$('.main-nav-sub').on('keydown', function (evt) {
-  if (evt.keyCode === 13 || evt.keyCode === 32) {
-    evt.preventDefault();
-    let currentSublist = $(this).closest('.main-nav__item');
+$(document).ready(function () {
+  $('.main-nav-sub').on('keydown', function (evt) {
+    if (evt.keyCode === 13 || evt.keyCode === 32) {
+      evt.preventDefault();
+      let currentSublist = $(this).closest('.main-nav__item');
 
-    $('.main-nav__item').not(currentSublist).removeClass('selected-on-tab');
-    currentSublist.toggleClass('selected-on-tab');
+      $('.main-nav__item').not(currentSublist).removeClass('selected-on-tab');
+      currentSublist.toggleClass('selected-on-tab');
 
-    // клик мышкой вне выпадающего меню
-    $(document).on('mouseup', function (evt) {
-      if (!currentSublist.is(evt.target) && currentSublist.has(evt.target).length === 0) {
-        currentSublist.removeClass('selected-on-tab');
-      }
-    });
-  }
+      // клик мышкой вне выпадающего меню
+      $(document).on('mouseup', function (evt) {
+        if (!currentSublist.is(evt.target) && currentSublist.has(evt.target).length === 0) {
+          currentSublist.removeClass('selected-on-tab');
+        }
+      });
+    }
+  });
 });
+
+// скользящая полоса в навигации
+$(document).ready(function () {
+  let marker = $('#nav-decoration');
+  let item = $('.main-nav__item');
+
+  // function indicator(e) {
+  //   marker.css('left', e.position().left) ;
+  //   marker.css('width', e.css('width'));
+  // }
+
+  item.each(function() {
+    $(this).on('mouseover', () => {
+      // indicator($(this));
+      marker.css('left', $(this).position().left) ;
+      marker.width($(this).width());
+
+      $('.main-nav').addClass('decor');
+    })
+  });
+
+  $('.main-nav').on('mouseleave', () => {
+    // setTimeout(() => {
+      $('.main-nav').removeClass('decor');
+    // }, 600)
+  })
+});
+
+// let marker = document.querySelector('#nav-decoration');
+// let item = document.querySelectorAll('.main-nav__item');
+
+// function indicator(e) {
+//   marker.style.left = e.offsetLeft+'px';
+//   marker.style.width = e.offsetWidth+'px';
+// }
+
+// item.forEach(link => {
+//   link.addEventListener('mouseover', (e) => {
+//     indicator(e.target.parentNode);
+//   })
+// })
 
 // фильтр центров над картой
 // $(document).ready(function () {
