@@ -1,5 +1,5 @@
 // для слайдеров с тенью
-.swiper-container-big-container {
+.swiper-container-big {
   box-sizing: border-box;
   width: 138rem;
   .margin-inline(@a);
@@ -23,8 +23,17 @@
 
 .swiper-buttons-wrap {
   position: relative;
-  width: 165.4rem;
   .margin-inline(@a);
+
+  &-big {
+    width: 165.4rem;
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+  }
 }
 
 .swiper-button {
@@ -46,16 +55,16 @@
 }
 
 .swiper-button-prev {
-  // left: -165px;
-  left: 0;
+  left: -165px;
+  // left: 0;
   &::after {
     background-image: url('../img/svg/arrow-left.svg');
   }
 }
 
 .swiper-button-next {
-  // right: -165px;
-  right: 0;
+  right: -165px;
+  // right: 0;
   &::after {
     background-image: url('../img/svg/arrow-right.svg');
   }

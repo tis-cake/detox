@@ -1237,7 +1237,7 @@ html .desktop-flex {
   left: -345px;
 }
 /*swiper*/
-.swiper-container-big-container {
+.swiper-container-big {
   box-sizing: border-box;
   width: 138rem;
   margin-left: auto;
@@ -1245,15 +1245,23 @@ html .desktop-flex {
   overflow-x: hidden;
   overflow-y: initial;
 }
-.swiper-container-big-container .swiper-container {
+.swiper-container-big .swiper-container {
   overflow: initial;
   margin-left: 1rem;
 }
 .swiper-buttons-wrap {
   position: relative;
-  width: 165.4rem;
   margin-left: auto;
   margin-right: auto;
+}
+.swiper-buttons-wrap-big {
+  width: 165.4rem;
+}
+.swiper-buttons-wrap-big .swiper-button-prev {
+  left: 0;
+}
+.swiper-buttons-wrap-big .swiper-button-next {
+  right: 0;
 }
 .swiper-button {
   width: 66px;
@@ -1271,20 +1279,20 @@ html .desktop-flex {
   background-size: cover;
 }
 .swiper-button-prev {
-  left: 0;
+  left: -165px;
 }
 .swiper-button-prev::after {
   background-image: url('../img/svg/arrow-left.svg');
 }
 .swiper-button-next {
-  right: 0;
+  right: -165px;
 }
 .swiper-button-next::after {
   background-image: url('../img/svg/arrow-right.svg');
 }
 .doctors-swiper {
-  padding-top: 139px;
-  padding-bottom: 139px;
+  padding-top: 140px;
+  padding-bottom: 60px;
 }
 .doctors-swiper__text-wrap {
   margin-bottom: 80px;
@@ -1307,7 +1315,7 @@ html .desktop-flex {
   position: relative;
   z-index: 1;
   min-height: 287px;
-  padding-top: 150px;
+  padding-top: 148px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 30px;
@@ -1346,6 +1354,84 @@ html .desktop-flex {
 }
 .doctors-swiper__figure::before {
   top: 316px;
+}
+.rehabs-swiper {
+  padding-top: 107px;
+  padding-bottom: 107px;
+}
+.rehabs-swiper__text-wrap {
+  margin-bottom: 81px;
+}
+.rehabs-swiper__caption {
+  margin-bottom: 22px;
+}
+.rehabs-swiper__link {
+  width: 308px;
+}
+.rehabs-swiper__img-wrap {
+  position: relative;
+  height: 325px;
+  margin: 0;
+  margin-bottom: 33px;
+  border-radius: 20px;
+  box-shadow: 21px 28px 54px 5px rgba(5, 30, 56, 0.05);
+}
+.rehabs-swiper__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.rehabs-swiper__category {
+  box-sizing: border-box;
+  position: absolute;
+  top: 19px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 39px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 20px;
+  box-shadow: 0 16px 16px rgba(66, 236, 126, 0.21);
+  background-image: linear-gradient(to right, #1a944c 0%, #2bae60 100%);
+}
+.rehabs-swiper__category-item {
+  position: relative;
+  padding-left: 25px;
+}
+.rehabs-swiper__category-item::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url('../img/svg/star-white.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.rehabs-swiper__detail-wrap {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.rehabs-swiper__subtitle {
+  margin-bottom: 6px;
+}
+.rehabs-swiper__desc {
+  margin-bottom: 13px;
+}
+.rehabs-swiper__price-val {
+  font-weight: 900;
+}
+.rehabs-swiper__price-icon {
+  font-weight: 900;
+  font-size: 15px;
 }
 /*footer*/
 
