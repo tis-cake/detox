@@ -37,11 +37,11 @@
   }
 }
 
-.main-nav__item:hover .main-nav__sublist,
-.main-nav__link:focus + .main-nav__sublist {
-  visibility: visible;
-  opacity: 1;
-}
+// .main-nav__item:hover .main-nav__sublist,
+// .main-nav__link:focus + .main-nav__sublist {
+//   visibility: visible;
+//   opacity: 1;
+// }
 
 .main-nav__link {
   cursor: pointer;
@@ -121,6 +121,16 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  // .main-nav-sub.selected-on-tab + .main-nav__sublist,
+  .main-nav__item.selected-on-tab .main-nav__sublist,
+  .main-nav__item:hover .main-nav__sublist,
+  .main-nav__link:focus + .main-nav__sublist {
+    visibility: visible;
+    opacity: 1;
   }
 }
 

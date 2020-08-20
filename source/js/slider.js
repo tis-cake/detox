@@ -34,8 +34,6 @@ $(document).ready(function () {
     spaceBetween: 25,
     touchRatio: 1,
 
-    watchSlidesVisibility: true, // удаляем тень у слайдов вне поля видимости
-
     navigation: {
       nextEl: '.rehabs-swiper__button-next',
       prevEl: '.rehabs-swiper__button-prev',

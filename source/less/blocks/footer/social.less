@@ -1,0 +1,43 @@
+.social {
+}
+
+.social__list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social__item {
+  margin-left: 24px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 57px;
+  height: 57px;
+  background-color: #35305a;
+  border-radius: 50%;
+  // opacity: 0.06;
+
+  &:hover,
+  &:focus {
+    .social__img {
+      opacity: 1;
+    }
+  }
+}
+
+.social__img-wrap {
+  width: 26px;
+  height: 26px;
+}
+
+.social__img {
+  transition: @s;
+  opacity: 0.5;
+  .img-contain;
+}
