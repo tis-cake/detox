@@ -1,24 +1,30 @@
 .footer {
+  overflow: hidden;
   position: relative;
-
   margin-top: 126px;
-  padding-top: 29.2rem;
-  padding-bottom: 8.5rem;
+  padding-top: 29rem;
 
   color: @dark-blue;
+
+  --height: 72rem;
+  --dynamic-height: 37.5vw;
+
 
   &::before {
     position: absolute;
     content: '';
     z-index: 0;
-
-    top: 0;
-    // top: var(--top);
+    bottom: 0;
+    // top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    height: 720px;
-    // height: var(--height);
+    width: 101%;
+
+    /* !NB */
+    /* При добавлении новых элементов в колонки (переполнении) увеличить значение --dynamic-height (в .footer) */
+    height: var(--dynamic-height);
+    // height: 72rem;
+    // height: 37.5vw;
 
     background-image: url('../img/svg/figures/footer-d.svg');
     background-repeat: no-repeat;
@@ -27,11 +33,45 @@
   }
 }
 
+@media (min-width: @max-desktop-width) {
+  /*
+    Декоративный элемент должен увеличивать height через vw
+    и понижать bottom на 1.5 от этой высоты.
+
+    1) --dynamic-height - это та же высота, выраженная в vw (720px/72rem = 37.5vw).
+    2) --difference-height - это разница между динамической и статичной высотой.
+    3) --dynamic-bottom - динамическая величина bottom, зависимая от высоты декоративного элемента
+       (чем больше элемент - тем на 1.5 меньше bottom).
+
+    4) При таком варианте before увеличивает высоту подвала, не скрываясь за экран.
+    5) Чтобы скрыть => overflow: hidden => обрезается фон.
+    6) Чтобы не обрезать высоту фона меняем статический padding-top
+       (29.2rem) на динамический (--dynamic-padding-top).
+  */
+
+  .footer {
+    /* отступ сверху в footer */
+    --padding-top: 29rem;
+
+    --difference-height: calc(var(--dynamic-height) - var(--height));
+    --dynamic-bottom: calc(var(--difference-height) / -1.5);
+    --dynamic-padding-top: calc(var(--padding-top) + var(--difference-height) / 3.2);
+
+    padding-top: var(--dynamic-padding-top);
+
+    &::before {
+      bottom: var(--dynamic-bottom);
+    }
+  }
+}
+
 .footer__bg-wrap {
+  padding-bottom: 11.2rem;
   background-color: #2e2854;
 }
 
 .footer__container {
+  min-height: 31.8rem;
 }
 
 .footer__top {
