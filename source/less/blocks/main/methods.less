@@ -1,6 +1,6 @@
 .methods {
-  padding-top: 141px;
-  padding-bottom: 141px;
+  padding-top: 14.1rem;
+  padding-bottom: 14.1rem;
 }
 
 .methods__wrap {
@@ -9,46 +9,46 @@
 }
 
 .methods__content-wrap {
-  width: 340px;
+  width: 34rem;
 }
 
 .methods__caption {
-  margin-bottom: 26px;
+  margin-bottom: 2.6rem;
 }
 
 .methods__title {
-  margin-bottom: 33px;
+  margin-bottom: 3.3rem;
 }
 
 .methods__desc {}
 
 .methods__btn {
-  margin-top: 24px;
+  margin-top: 2.4rem;
 }
 
 .methods__list {
   display: grid;
-  grid-template-columns: repeat(2, 360px);
-  column-gap: 74px;
-  row-gap: 84px;
+  grid-template-columns: repeat(2, 36rem);
+  column-gap: 7.4rem;
+  row-gap: 8.4rem;
 
   counter-reset: methodsItem;
 }
 
 .methods__item {
   position: relative;
-  padding-top: 53px;
+  padding-top: 5.3rem;
 
   &::before {
     counter-increment: methodsItem;
     content: counter(methodsItem, decimal-leading-zero);
 
     position: absolute;
-    top: -4px;
-    left: 4px;
+    top: -0.4rem;
+    left: 0.4rem;
 
     font-weight: @heavy;
-    font-size: 35px;
+    font-size: 3.5rem;
   }
 
   &:nth-child(1)::before,
@@ -66,14 +66,14 @@
 }
 
 .methods__item-title {
-  margin-bottom: 21px;
+  margin-bottom: 2.1rem;
 }
 
 .methods__item-desc {}
 
 .methods__figure {
   &::before {
-    top: -195px;
-    left: -460px;
+    top: -19.5rem;
+    left: -46rem;
   }
 }

@@ -1,22 +1,22 @@
 .service-preview {
   position: relative;
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
 }
 
 .service-preview__text-wrap {
-  width: 530px;
+  width: 53rem;
   .margin-inline(@a);
-  margin-bottom: 70px;
+  margin-bottom: 7rem;
   text-align: center;
 }
 
 .service-preview__caption {
-  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
 }
 
 .service-preview__title {
-  margin-bottom: 22px;
+  margin-bottom: 2.2rem;
 }
 
 .service-preview__desc {
@@ -24,12 +24,12 @@
 
 .service-preview__list {
   display: grid;
-  grid-template-columns: repeat(7, 165px);
-  gap: 28px;
+  grid-template-columns: repeat(7, 16.5rem);
+  gap: 2.8rem;
 }
 
 .service-preview__item {
-  // width: 165px;
+  // width: 16.5rem;
 }
 
 .service-preview__link {
@@ -39,30 +39,30 @@
   flex-direction: column;
   align-items: center;
 
-  height: 165px;
-  padding-top: 34px;
+  height: 16.5rem;
+  padding-top: 3.4rem;
 
   background-color: #fff;
-  box-shadow: 21px 28px 54px 5px rgba(5, 30, 56, 0.05);
-  border-radius: 15px;
+  box-shadow: 2.1rem 2.8rem 5.4rem 0.5rem rgba(5, 30, 56, 0.05);
+  border-radius: 1.5rem;
 
   &:hover,
   &:focus {
-    box-shadow: 21px 28px 54px 5px rgba(5, 30, 56, 0.1);
+    box-shadow: 2.1rem 2.8rem 5.4rem 0.5rem rgba(5, 30, 56, 0.1);
   }
 }
 
 .service-preview__img-wrap {
   z-index: 0;
   position: relative;
-  width: 50px;
-  height: 50px;
-  margin-bottom: 28px;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2.8rem;
   &::before {
     z-index: -1;
     position: absolute;
     content: '';
-    top: -6px;
+    top: -0.6rem;
     left: 0;
 
     background-repeat: no-repeat;
@@ -76,9 +76,9 @@
   &:nth-child(5),
   &:nth-child(7) {
     .service-preview__img-wrap::before {
-      left: -6px;
-      width: 65px;
-      height: 52px;
+      left: -0.6rem;
+      width: 6.5rem;
+      height: 5.2rem;
     }
   }
 
@@ -87,9 +87,9 @@
   &:nth-child(4),
   &:nth-child(6) {
     .service-preview__img-wrap::before {
-      left: -10px;
-      width: 75px;
-      height: 58px;
+      left: -1rem;
+      width: 7.5rem;
+      height: 5.8rem;
     }
   }
 
@@ -128,7 +128,7 @@
 
 .service-preview__item-title {
   font-weight: @heavy;
-  font-size: 14px;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 
@@ -136,8 +136,8 @@
   left: auto;
   right: 0;
   &::before {
-    top: -178px;
+    top: -17.8rem;
     left: initial;
-    right: -490px;
+    right: -49rem;
   }
 }
