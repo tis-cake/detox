@@ -171,6 +171,119 @@
 
 .goals__item-desc {
   margin-top: auto;
+
+  font-weight: @medium;
   font-size: 1.9rem;
   line-height: 2rem;
+}
+
+@media (max-width: @tablet-width) {
+
+  .goals {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .goals__figure {
+    &::before {
+      // left: 11rem;
+    }
+  }
+
+  .goals__text-wrap {
+    margin-bottom: 3.5rem;
+  }
+
+  .goals__caption {
+    margin-bottom: 0.5rem;
+  }
+
+  .goals__list {
+    grid-template-columns: repeat(auto-fit, minmax(16.3rem, 1fr));
+    gap: 1.6rem;
+  }
+
+  .goals__figure-dots {
+    &::before {
+      // top: 15.3rem;
+      // left: -5.7rem;
+    }
+  }
+
+  .goals__item {
+    height: 25.4rem;
+    padding-top: 1.6rem;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .goals__item-title {
+    min-height: 6.3rem;
+    margin-bottom: 1rem;
+    padding-right: 0;
+    line-height: initial;
+  }
+
+  .goals__img-wrap {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1.2rem;
+
+    &::before {
+      left: -1.6rem;
+    }
+  }
+
+  .goals__item {
+    &:nth-child(2),
+    &:nth-child(3) {
+      .goals__img-wrap::before {
+        width: 6.4rem;
+        height: 5.1rem;
+      }
+    }
+
+    &:nth-child(1) {
+      .goals__img-wrap::before {
+        width: 5.9rem;
+        height: 4.8rem;
+      }
+    }
+    &:nth-child(2) {
+      .goals__img-wrap {
+        width: 4.5rem;
+        height: 4rem;
+      }
+      .goal__img-wrap {
+        margin-top: 0.5rem;
+      }
+    }
+    &:nth-child(4) {
+      .goals__img-wrap::before {
+        width: 6.8rem;
+        height: 5.3rem;
+        background-image: url('../img/svg/icons-bg/b-l-blue-1.svg');
+      }
+      .goals__img {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+    &:nth-child(3) {
+      .goals__img-wrap::before {
+        width: 7.6rem;
+        height: 5.3rem;
+        background-image: url('../img/svg/icons-bg/t-l-light-green-2.svg');
+      }
+      .goals__img {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .goals__item-desc {
+    font-size: 1.4rem;
+    line-height: initial;
+  }
 }
