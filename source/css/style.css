@@ -51,6 +51,9 @@ body {
   font-size: 1.8rem;
   color: var(--color-first);
   background-color: #fff;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 img {
   max-width: 100%;
@@ -430,6 +433,195 @@ html .desktop-flex {
   background-position: center;
   background-size: cover;
 }
+.ruffles {
+  position: absolute;
+  left: 50%;
+  transform: translateX(var(--translateX)) rotate(var(--rotate)) scale(var(--scale));
+  --translateX: -50%;
+  --rotate: 0deg;
+  --scale: 1;
+}
+.ruffles--blue-1 {
+  fill: #66d3c5;
+}
+.ruffles--blue-2 {
+  fill: #66d4c5;
+}
+.ruffles--blue-3 {
+  fill: #90d4e7;
+}
+.ruffles--dark-blue {
+  fill: #35335a;
+}
+.t182 {
+  top: 18.2rem;
+}
+.t418 {
+  top: 41.8rem;
+}
+.t743 {
+  top: 74.3rem;
+}
+.t829 {
+  top: 82.9rem;
+}
+.t1712 {
+  top: 171.2rem;
+}
+.t2263 {
+  top: 226.3rem;
+}
+.t2345 {
+  top: 234.5rem;
+}
+.t3220 {
+  top: 322rem;
+}
+.t3285 {
+  top: 328.5rem;
+}
+.t4320 {
+  top: 432rem;
+}
+.t4568 {
+  top: 456.8rem;
+}
+.t4690 {
+  top: 469rem;
+}
+.t5624 {
+  top: 562.4rem;
+}
+.t5698 {
+  top: 569.8rem;
+}
+.t5730 {
+  top: 573rem;
+}
+.t6400 {
+  top: 640rem;
+}
+.t6640 {
+  top: 664rem;
+}
+.t6660 {
+  top: 666rem;
+}
+.t6705 {
+  top: 670.5rem;
+}
+.t7325 {
+  top: 732.5rem;
+}
+.t7362 {
+  top: 736.2rem;
+}
+.t8110 {
+  top: 811rem;
+}
+.t8170 {
+  top: 817rem;
+}
+.t9948 {
+  top: 994.8rem;
+}
+.t9982 {
+  top: 998.2rem;
+}
+/* + */
+.x530 {
+  --translateX: 53rem;
+}
+.x595 {
+  --translateX: 59.5rem;
+}
+.x700 {
+  --translateX: 70rem;
+}
+.x755 {
+  --translateX: 75.5rem;
+}
+.x768 {
+  --translateX: 76.8rem;
+}
+.x800 {
+  --translateX: 80rem;
+}
+.x820 {
+  --translateX: 82rem;
+}
+.x825 {
+  --translateX: 82.5rem;
+}
+.x884 {
+  --translateX: 88.4rem;
+}
+.x890 {
+  --translateX: 89rem;
+}
+/* - */
+.x-142 {
+  --translateX: -14.2rem;
+}
+.x-224 {
+  --translateX: -22.4rem;
+}
+.x-716 {
+  --translateX: -71.6rem;
+}
+.x-748 {
+  --translateX: -74.8rem;
+}
+.x-763 {
+  --translateX: -76.3rem;
+}
+.x-770 {
+  --translateX: -77rem;
+}
+.x-810 {
+  --translateX: -81rem;
+}
+.x-824 {
+  --translateX: -82.4rem;
+}
+.x-840 {
+  --translateX: -84rem;
+}
+.x-870 {
+  --translateX: -87rem;
+}
+.x-890 {
+  --translateX: -89rem;
+}
+/* + */
+.r10 {
+  --rotate: 10deg;
+}
+.r50 {
+  --rotate: 50deg;
+}
+/* - */
+.r-5 {
+  --rotate: -5deg;
+}
+.r-15 {
+  --rotate: -15deg;
+}
+.r-20 {
+  --rotate: -20deg;
+}
+.r-25 {
+  --rotate: -25deg;
+}
+.r-45 {
+  --rotate: -45deg;
+}
+.r-60 {
+  --rotate: -60deg;
+}
+.s08 {
+  --scale: 0.8;
+}
 /*header*/
 .header {
   position: absolute;
@@ -551,21 +743,23 @@ html .desktop-flex {
   box-sizing: border-box;
   position: absolute;
   z-index: 5;
-  top: 4rem;
+  top: 3.5rem;
+  left: -1.9rem;
   visibility: hidden;
   opacity: 0;
   transition-duration: 0.3s;
-  padding: 2.6rem;
-  width: 104.3rem;
-  -moz-column-count: 2;
-       column-count: 2;
-  background-color: #F5F5F5;
+  padding: 1.7rem 1.7rem;
+  width: 35.6rem;
+  font-size: 1.8rem;
+  border-radius: 1.5rem;
+  background-color: #f2effd;
+  box-shadow: 0.9rem 1.1rem 2.4rem rgba(37, 16, 72, 0.06);
 }
 .main-nav__subitem {
-  margin-bottom: 2rem;
+  margin-bottom: 0.9rem;
 }
 .main-nav__subitem:last-child {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 .main-nav__sublink {
   display: block;
@@ -590,19 +784,22 @@ html .desktop-flex {
   background-size: contain;
 }
 .main-nav__decoration {
+  z-index: -1;
   position: absolute;
-  bottom: 14px;
+  bottom: 1rem;
   left: 0;
   width: 0;
-  height: 3px;
-  border-radius: 2px;
+  height: 0.3rem;
+  border-radius: 0.2rem;
   background-color: #4f405f;
-  transition-property: all, opacity;
-  transition-duration: var(--transition-main);
-  transition-delay: 0s, 0.4s;
+  transition-property: all, left;
+  transition-duration: var(--transition-main), 0s;
+  transition-delay: 0s;
   opacity: 0;
 }
 .decor .main-nav__decoration {
+  transition-property: all, left;
+  transition-duration: var(--transition-main), var(--transition-main);
   opacity: 1;
 }
 @media (min-width: 48em) {
@@ -965,7 +1162,7 @@ html .desktop-flex {
   margin-bottom: 3.3rem;
 }
 .methods__btn {
-  margin-top: 2.4rem;
+  margin-top: 4.6rem;
 }
 .methods__list {
   display: grid;
@@ -1463,6 +1660,9 @@ html .desktop-flex {
 .rehabs-swiper__price-icon {
   font-weight: 900;
   font-size: 1.5rem;
+}
+.rehabs-swiper__button-prev .rehabs-swiper__button-next {
+  top: 34%;
 }
 /*footer*/
 .footer {
