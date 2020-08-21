@@ -36,25 +36,36 @@
   }
 }
 
-// @media (max-width: @tablet-width) {
+@media (max-width: @tablet-width) {
+  .caption {
+    font-size: 1.2rem;
+    &--large {
+      // font-size: 2rem;
+    }
+  }
 
-//   .section-title {
-//     font-size: 2.5rem;
-//     line-height: 3rem;
-//     &--small {
-//       // font-size: 3.5rem;
-//     }
-//     &--big {
-//       // font-size: 4rem;
-//     }
-//   }
+  .title {
+    font-size: 2.7rem;
+    line-height: initial;
+    &--large {
+      font-size: 3.2rem;
+      line-height: 3.1rem;
+    }
+    &--small {
+      // font-size: 4rem;
+      // line-height: 4.8rem;
+    }
+  }
 
-//   .section-desc {
-//     font-size: 1.3rem;
-//     line-height: 1.6rem;
-//   }
+  .subtitle {
+    // font-size: 1.6rem;
+    font-size: 2rem;
+  }
 
-//   .DaVinci {
-//     font-size: 3rem;
-//   }
-// }
+  .desc {
+    font-size: 1.6rem;
+    &--large {
+      // font-size: 2.1rem;
+    }
+  }
+}

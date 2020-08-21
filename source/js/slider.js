@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
   let doctorsSwiper = new Swiper('#doctors-swiper', {
-    slidesPerView: '2',
+    slidesPerView: '1.2',
     spaceBetween: 25,
     touchRatio: 1,
 
@@ -18,10 +18,6 @@ $(document).ready(function () {
         slidesPerView: '3',
         spaceBetween: 20,
       },
-      // 550: {
-      //   slidesPerView: '3',
-      //   spaceBetween: 30,
-      // }
     }
   });
 });
@@ -44,10 +40,6 @@ $(document).ready(function () {
         slidesPerView: '4',
         spaceBetween: 20,
       },
-      // 550: {
-      //   slidesPerView: '3',
-      //   spaceBetween: 30,
-      // }
     }
   });
 });

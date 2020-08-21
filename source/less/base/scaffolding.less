@@ -152,8 +152,24 @@ html .desktop-flex {
 }
 
 @media (max-width: @tablet-width) {
+  section,
+  article {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-info,
+  .service-preview,
+  .goals,
+  .contraindications,
+  .doctors-swiper,
+  .rehabs-swiper {
+    max-width: none;
+  }
+
   html {
-    --container-padding-block: 3.5rem;
+    // --container-padding-block: 3.5rem;
   }
 
   // .main {
@@ -170,8 +186,8 @@ html .desktop-flex {
   .container-outside,
   .container-inside {
     width: @a;
-    // .padding-inline(3.5rem);
-    .padding-inline(var(--container-padding-block));
+    .padding-inline(1.6rem);
+    // .padding-inline(var(--container-padding-block));
   }
 
   html .desktop-flex,
@@ -190,13 +206,13 @@ html .desktop-flex {
 
 @media (max-width: 24.4em) {
   html {
-    --container-padding-block: 2rem;
+    // --container-padding-block: 2rem;
   }
-  // .container,
-  // .container-outside,
-  // .container-inside {
-  //   .padding-inline(2rem);
-  // }
+  .container,
+  .container-outside,
+  .container-inside {
+    // .padding-inline(2rem);
+  }
 }
 
 // 340px

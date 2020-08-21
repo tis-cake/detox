@@ -31,7 +31,7 @@
           </a>
 
           <a class="header__link-call-back modal-callback" href="#">
-            <!-- <img class="header__link-call-back-img" src="img/svg/call-w.svg" alt="Обратный звонок"> -->
+            <img class="header__link-call-back-img" src="img/svg/phone.svg" alt="Обратный звонок" width="32" height="32">
           </a>
 
           <nav class="header__main-nav main-nav">
@@ -96,7 +96,10 @@
 
       <section class="main-info main-bg">
         <div class="main-bg__img-wrap">
-          <img class="main-bg__img" src="img/main-bg/1.png" alt="Декоративное изображение">
+          <picture>
+            <source media="(max-width:768px)" srcset="img/main-bg/1-m.png">
+            <img class="main-bg__img" src="img/main-bg/1-d.png" alt="Декоративное изображение">
+          </picture>
         </div>
         <div class="main-info__container container">
           <div class="main-info__wrap main-info__wrap--two-half">
@@ -566,6 +569,9 @@
               </p>
             </li>
           </ul>
+          <button class="additionally__btn-more btn-more">
+            Показать ещё
+          </button>
         </div>
         <div class="additionally__figure figure figure-6" aria-hidden="true"></div>
       </section>
@@ -854,6 +860,79 @@
 
             <div class="swiper-button swiper-button-next rehabs-swiper__button-next"></div>
           </div>
+
+          <div class="rehabs-swiper__mobile-list">
+            <a class="rehabs-swiper__link" href="rehab-detail.html">
+              <figure class="rehabs-swiper__img-wrap">
+                <img class="rehabs-swiper__img" src="img/swiper/4.jpg" alt="Центр 1">
+                <figcaption class="rehabs-swiper__category">
+                  <span class="rehabs-swiper__category-item">
+                    Комфорт
+                  </span>
+                </figcaption>
+              </figure>
+              <div class="rehabs-swiper__detail-wrap">
+                <p class="rehabs-swiper__subtitle subtitle">
+                  г. Москва
+                </p>
+                <p class="rehabs-swiper__desc desc">
+                  ул. Большая Академическая, 13А
+                </p>
+                <p class="rehabs-swiper__price desc">
+                  <span class="rehabs-swiper__price-val">от 3000</span> <span class="rehabs-swiper__price-icon">&#8381;</span> / в сутки
+                </p>
+              </div>
+            </a>
+
+            <a class="rehabs-swiper__link" href="rehab-detail.html">
+              <figure class="rehabs-swiper__img-wrap">
+                <img class="rehabs-swiper__img" src="img/swiper/4.jpg" alt="Центр 1">
+                <figcaption class="rehabs-swiper__category">
+                  <span class="rehabs-swiper__category-item">
+                    Комфорт
+                  </span>
+                </figcaption>
+              </figure>
+              <div class="rehabs-swiper__detail-wrap">
+                <p class="rehabs-swiper__subtitle subtitle">
+                  г. Москва
+                </p>
+                <p class="rehabs-swiper__desc desc">
+                  ул. Большая Академическая, 13А
+                </p>
+                <p class="rehabs-swiper__price desc">
+                  <span class="rehabs-swiper__price-val">от 3000</span> <span class="rehabs-swiper__price-icon">&#8381;</span> / в сутки
+                </p>
+              </div>
+            </a>
+
+            <a class="rehabs-swiper__link" href="rehab-detail.html">
+              <figure class="rehabs-swiper__img-wrap">
+                <img class="rehabs-swiper__img" src="img/swiper/4.jpg" alt="Центр 1">
+                <figcaption class="rehabs-swiper__category">
+                  <span class="rehabs-swiper__category-item">
+                    Комфорт
+                  </span>
+                </figcaption>
+              </figure>
+              <div class="rehabs-swiper__detail-wrap">
+                <p class="rehabs-swiper__subtitle subtitle">
+                  г. Москва
+                </p>
+                <p class="rehabs-swiper__desc desc">
+                  ул. Большая Академическая, 13А
+                </p>
+                <p class="rehabs-swiper__price desc">
+                  <span class="rehabs-swiper__price-val">от 3000</span> <span class="rehabs-swiper__price-icon">&#8381;</span> / в сутки
+                </p>
+              </div>
+            </a>
+
+            <!-- Если больше 3 - остальные скрывать, выводить ссылку .btn-more -->
+          </div>
+          <a class="rehabs-swiper__btn-more btn-more" href="rehabs.html">
+            Все клиники
+          </a>
         </div>
       </section>
 

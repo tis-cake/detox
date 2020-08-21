@@ -69,3 +69,24 @@
     background-image: url('../img/svg/arrow-right.svg');
   }
 }
+
+@media (max-width: @tablet-width) {
+  // для слайдеров с тенью
+  .swiper-container-big {
+    width: 100%;
+    .swiper-container {
+      margin-left: 0;
+    }
+  }
+
+  .swiper-buttons-wrap {
+    .padding-inline(1.6rem);
+    &-big {
+      width: auto;
+    }
+  }
+
+  .swiper-button {
+    display: none;
+  }
+}

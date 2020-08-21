@@ -53,14 +53,8 @@ $(document).ready(function () {
   let marker = $('#nav-decoration');
   let item = $('.main-nav__item');
 
-  // function indicator(e) {
-  //   marker.css('left', e.position().left) ;
-  //   marker.css('width', e.css('width'));
-  // }
-
   item.each(function() {
     $(this).on('mouseover', () => {
-      // indicator($(this));
       marker.css('left', $(this).position().left) ;
       marker.width($(this).width());
 
@@ -75,19 +69,13 @@ $(document).ready(function () {
   })
 });
 
-// let marker = document.querySelector('#nav-decoration');
-// let item = document.querySelectorAll('.main-nav__item');
-
-// function indicator(e) {
-//   marker.style.left = e.offsetLeft+'px';
-//   marker.style.width = e.offsetWidth+'px';
-// }
-
-// item.forEach(link => {
-//   link.addEventListener('mouseover', (e) => {
-//     indicator(e.target.parentNode);
-//   })
-// })
+$(document).ready(function () {
+  $('.additionally__btn-more').on('click', function(evt) {
+    $('.additionally__list').addClass('more-click');
+    $(this).addClass('more-click');
+    $('.additionally__item').fadeIn();
+  });
+});
 
 // фильтр центров над картой
 // $(document).ready(function () {
@@ -139,13 +127,15 @@ $(document).ready(function () {
 
 // для "противопоказаний", если в грид-сетке в левой колонке остаётся 1 элемент
 $(document).ready(function () {
-  $('.contraindications__list').each(function () {
+  if (width >= 756) {
+    $('.contraindications__list').each(function () {
     elChildLength = $(this).children().length;
 
     if (elChildLength % 3 === 1) {
       $(this).addClass('single-grid-item');
     }
-  })
+    })
+  }
 });
 
 // модальные окна
