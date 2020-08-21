@@ -153,3 +153,104 @@
     left: -47.8rem;
   }
 }
+
+@media (max-width: @tablet-width) {
+  .contraindications {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .contraindications__wrap {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .contraindications__content-wrap {
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+
+  .contraindications__caption {
+    margin-bottom: 1rem;
+  }
+
+  .contraindications__title {
+    margin-bottom: 1.3rem;
+  }
+
+  .contraindications__btn {
+    display: none;
+  }
+
+  .contraindications__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'first five'
+      'second third'
+      'fourth six';
+
+    gap: 1.6rem;
+
+    width: auto;
+  }
+
+  .contraindications__item {
+    height: 17.5rem;
+    padding-top: 2.6rem;
+    .padding-inline(1.6rem);
+    padding-bottom: 1rem;
+
+    border-radius: 1.5rem;
+
+    &:nth-child(3n+2) {
+      margin-top: 0;
+    }
+    &:nth-child(1),
+    &:nth-child(3) {
+      height: 20.8rem;
+    }
+
+    &:nth-child(1) {
+      grid-area: first;
+    }
+    &:nth-child(2) {
+      grid-area: second;
+    }
+    &:nth-child(3) {
+      grid-area: third;
+      margin-top: -3.3rem;
+    }
+    &:nth-child(4) {
+      grid-area: fourth;
+    }
+    &:nth-child(5) {
+      grid-area: five;
+    }
+    &:nth-child(6) {
+      grid-area: six;
+    }
+  }
+
+  .single-grid-item .contraindications__item {
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+
+  .contraindications__img-wrap {
+    margin-bottom: 2.8rem;
+  }
+
+  .contraindications__item-title {
+    font-size: 1.6rem;
+  }
+
+  .contraindications__figure {
+    &::before {
+      // top: -109.3rem;
+      // left: -47.8rem;
+    }
+  }
+}
