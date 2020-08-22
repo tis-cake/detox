@@ -13,7 +13,15 @@
   align-items: center;
 }
 
-.header__logo {}
+.header__logo {
+  .logo__title-img--white {
+    display: none;
+  }
+}
+
+.header__main-nav {
+  margin-left: 2.5rem;
+}
 
 .header__phone-wrapper {
   text-align: right;
@@ -39,39 +47,70 @@
 
   .header {
     position: fixed;
-    // position: absolute;
-    // top: 0;
-    // z-index: 5;
 
-    // width: 100%;
     margin-top: 0;
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
     background-color: #fff;
+
+    &.active {
+      position: fixed;
+      z-index: 10;
+      min-height: 100vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      background-color: #302a56;
+
+      .header__container {}
+      .header__menu-toggle {}
+
+      .header__mobile-top {
+        margin-bottom: 4rem;
+      }
+
+      .header__logo {
+        .logo__title-img {
+          display: none;
+        }
+        .logo__title-img--white {
+          display: block;
+        }
+        &::before {
+          background-image: url('../img/svg/logo-white.svg');
+        }
+      }
+
+      .header__main-nav {
+        display: flex;
+      }
+      .header__link-call-back {
+        position: relative;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
   }
 
   .header__wrapper {
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
+    flex-direction: column;
+  }
+
+  .header__mobile-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   .header__logo {}
 
-  .header__phone-wrapper {
+  .header__phone-wrapper {}
 
+  .header__menu-toggle {
+    flex-shrink: 0;
   }
-
-  // .header__phone {
-  //   display: inline-block;
-
-  //   font-size: 2.2rem;
-  //   font-weight: @heavy;
-  // }
-
-  // .header__phone-text {
-  //   font-size: 1.7rem;
-  // }
 
   .header__menu-toggle,
   .header__link-call-back {
@@ -83,114 +122,13 @@
     display: none;
   }
 
+  .header__main-nav {
+    margin-left: 0;
+  }
+
   .header__link-call-back-img {
     width: 3.2rem;
     height: 3.2rem;
     transform: scale(-1, 1);
   }
-
-//   .header {
-//     height: @a;
-//     margin-top: 0;
-//     padding-top: @m54px;
-//     .container {
-//       width: @a;
-//     }
-//     .logo__description {
-//       display: none;
-//     }
-//   }
-
-//   .active.header {
-//     min-height: 100vh;      // убрать если js подключен
-//     overflow-y: scroll; // убрать если js подключен
-//     overflow-x: hidden; // убрать если js подключен
-//   }
-
-//   .no-js.header {
-//     position: relative;
-//     height: 200vw; // 1500px;
-//     overflow: visible;
-//   }
-
-//   .no-js.header,
-//   .active.header {
-//     // height: 100vh;      // убрать если js подключен
-//     // overflow-y: scroll; // убрать если js подключен
-//     // overflow-x: hidden; // убрать если js подключен
-
-//     // position: relative;
-//     z-index: 10;
-//     background-color: #303030;
-
-//     .header__wrapper {
-//       justify-content: flex-start;
-//       flex-wrap: wrap;
-//     }
-
-//     .header__link-call-back,
-//     .header__main-nav {
-//       display: block;
-//     }
-
-//     .header__phone-wrapper {
-//       display: none;
-//     }
-//   }
-
-//   .active.header {
-//     position: fixed;
-//     top: 0;
-//     // position: relative;
-//     height: 100vh;
-//   }
-
-//   .active.header * {
-//     color: #fff;
-//   }
-
-//   .header.bg .header__wrapper,
-//   .header__wrapper {
-//     margin-bottom: @m52px;
-//     border-bottom: none;
-//   }
-
-//   .header__menu-toggle {
-//     display: block;
-//   }
-
-//   .header__link-call-back,
-//   .header__main-nav {
-//     display: none;
-//   }
-
-//   .header__logo {
-//     margin-left: @m33px;
-//     margin-right: auto;
-//   }
-
-//   .header__main-nav {
-//     margin-top: @m52px;
-//     padding-left: @m5px;
-//   }
-
-//   .header__phone {
-//     margin-bottom: @m8px;
-//     font-size: @m24px;
-//   }
-
-//   .header__phone-text {
-//     font-size: @m18px;
-//   }
-
-//   .header__link-call-back {
-//     width: @m64px;
-//     height: @m62px;
-//   }
-
-//   .header__link-call-back-img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
 }

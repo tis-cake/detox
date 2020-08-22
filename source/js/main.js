@@ -22,8 +22,8 @@ $(document).ready(function () {
       $('.main-nav__sublist').not(currentSublist).slideUp();
       currentSublist.slideToggle();
 
-      $('.main-nav-sub').not($(this)).removeClass('active');
-      $(this).toggleClass('active');
+      $('.main-nav-sub').not($(this)).slideUp();
+      $(this).slideDown();
     });
   }
 });
@@ -50,23 +50,25 @@ $(document).ready(function () {
 
 // скользящая полоса в навигации
 $(document).ready(function () {
-  let marker = $('#nav-decoration');
-  let item = $('.main-nav__item');
+  if (width >= 756) {
+    let marker = $('#nav-decoration');
+    let item = $('.main-nav__item');
 
-  item.each(function() {
-    $(this).on('mouseover', () => {
-      marker.css('left', $(this).position().left) ;
-      marker.width($(this).width());
+    item.each(function() {
+      $(this).on('mouseover', () => {
+        marker.css('left', $(this).position().left) ;
+        marker.width($(this).width());
 
-      $('.main-nav').addClass('decor');
+        $('.main-nav').addClass('decor');
+      })
+    });
+
+    $('.main-nav').on('mouseleave', () => {
+      // setTimeout(() => {
+        $('.main-nav').removeClass('decor');
+      // }, 600)
     })
-  });
-
-  $('.main-nav').on('mouseleave', () => {
-    // setTimeout(() => {
-      $('.main-nav').removeClass('decor');
-    // }, 600)
-  })
+  }
 });
 
 $(document).ready(function () {
