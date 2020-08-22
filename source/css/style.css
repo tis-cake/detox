@@ -505,6 +505,17 @@ html .desktop-flex {
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 48em) {
+  .figure-5::before {
+    width: 49.8rem;
+    height: 69.1rem;
+    background-image: url('../img/svg/figures/gray-pink-stroke-2.svg');
+  }
+  .figure-7 {
+    width: 26.9rem;
+    height: 27.4rem;
+  }
+}
 .ruffles {
   position: absolute;
   left: 50%;
@@ -693,6 +704,14 @@ html .desktop-flex {
 }
 .s08 {
   --scale: 0.8;
+}
+@media (max-width: 48em) {
+  .ruffles {
+    left: auto;
+    transform: rotate(var(--rotate)) scale(var(--scale));
+  }
+  /* + */
+  /* - */
 }
 /*header*/
 .header {
@@ -1197,9 +1216,8 @@ html .desktop-flex {
     margin-left: auto;
     margin-right: auto;
   }
-  .main-info__figure::before {
-    top: -1.6rem;
-    left: -12.4rem;
+  .main-info__figure {
+    display: none;
   }
 }
 .main-bg {
@@ -1396,13 +1414,7 @@ html .desktop-flex {
     font-size: 1.2rem;
   }
   .service-preview__figure {
-    left: auto;
-    right: 0;
-  }
-  .service-preview__figure::before {
-    top: -17.8rem;
-    left: initial;
-    right: -49rem;
+    display: none;
   }
 }
 .goals {
@@ -1544,6 +1556,9 @@ html .desktop-flex {
     padding-top: 7rem;
     padding-bottom: 7rem;
   }
+  .goals__figure {
+    display: none;
+  }
   .goals__text-wrap {
     margin-bottom: 3.5rem;
   }
@@ -1674,6 +1689,12 @@ html .desktop-flex {
   }
   .b__img {
     border-radius: 3.5rem;
+  }
+  .b__figure-dots::before {
+    right: 9.9rem;
+    bottom: -2.8rem;
+    width: 14.5rem;
+    height: 12.4rem;
   }
   .b__content-wrap {
     width: 100%;
@@ -1884,6 +1905,9 @@ html .desktop-flex {
     padding-top: 5.4rem;
     padding-bottom: 5.4rem;
   }
+  .tariffs__figure-dots {
+    display: none;
+  }
   .tariffs__text-wrap {
     margin-bottom: 3rem;
   }
@@ -2059,6 +2083,9 @@ html .desktop-flex {
   font-weight: 500;
   text-align: center;
 }
+.contraindications__figure-2 {
+  display: none;
+}
 .contraindications__figure::before {
   top: -109.3rem;
   left: -47.8rem;
@@ -2136,8 +2163,21 @@ html .desktop-flex {
   .contraindications__item-title {
     font-size: 1.6rem;
   }
+  .contraindications__figure {
+    display: none;
+  }
+  .contraindications__figure-2 {
+    display: block;
+  }
+  .contraindications__figure-2::before {
+    top: -24rem;
+    left: auto;
+    right: -8.8rem;
+    bottom: 23.2rem;
+  }
 }
 .additionally {
+  position: relative;
   padding-top: 12.2rem;
   padding-bottom: 12.2rem;
 }
@@ -2186,6 +2226,9 @@ html .desktop-flex {
 .additionally__item-title {
   margin-bottom: 1.6rem;
 }
+.additionally__figure-2 {
+  display: none;
+}
 .additionally__figure::before {
   top: -0.4rem;
   left: -34.5rem;
@@ -2196,6 +2239,7 @@ html .desktop-flex {
     padding-bottom: 5.8rem;
   }
   .additionally__text-wrap {
+    margin-bottom: 3.2rem;
     text-align: left;
   }
   .additionally__caption {
@@ -2224,7 +2268,17 @@ html .desktop-flex {
     height: 1.3rem;
   }
   .additionally__item-title {
-    margin-bottom: 1;
+    margin-bottom: 1.2rem;
+  }
+  .additionally__figure {
+    display: none;
+  }
+  .additionally__figure-2 {
+    display: block;
+  }
+  .additionally__figure-2::before {
+    top: 34rem;
+    left: 23.6rem;
   }
   .additionally__btn-more {
     margin-top: 4.7rem;
@@ -2393,6 +2447,9 @@ html .desktop-flex {
     top: -7rem;
     width: 15rem;
     height: 15rem;
+  }
+  .doctors-swiper__figure {
+    display: none;
   }
 }
 .rehabs-swiper {

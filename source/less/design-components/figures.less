@@ -72,3 +72,27 @@
     background-size: cover;
   }
 }
+
+@media (max-width: @tablet-width) {
+
+  .figure {
+    // display: none !important;
+
+    &-5::before {
+      width: 49.8rem;
+      height: 69.1rem;
+      background-image: url('../img/svg/figures/gray-pink-stroke-2.svg');
+    }
+    &-7 {
+      width: 26.9rem;
+      height: 27.4rem;
+    }
+  }
+
+  .figure-dots {
+    &::before {
+      // width: 145px;
+      // height: 124px;
+    }
+  }
+}
