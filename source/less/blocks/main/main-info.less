@@ -40,6 +40,12 @@
   }
 }
 
+.main-info__ruffles {
+  &-m {
+    display: none;
+  }
+}
+
 @media (max-width: @tablet-width) {
   .main-info {
     /* padding-top: 35.5rem; */
@@ -79,6 +85,25 @@
     &::before {
       // top: -1.6rem;
       // left: -12.4rem;
+    }
+  }
+
+  .main-info__ruffles {
+    display: none;
+    &-m {
+      display: block;
+    }
+    &-m-1 {
+      top: 31rem;
+    }
+    &-m-2 {
+      top: 35rem;
+    }
+    &-m-3 {
+      top: 56.5rem;
+    }
+    &-m-4 {
+      top: 65.5rem;
     }
   }
 }

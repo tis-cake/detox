@@ -5,9 +5,6 @@ $(document).ready(function () {
   $('.menu-toggle').click(function () {
   $(this).toggleClass('active');
   $('.header').toggleClass('active');
-  // $('.main-nav').toggleClass('active');
-  $('.select-lang').toggleClass('mobile-menu');
-  $('.aside-link').toggleClass('mobile-menu');
    $("body").toggleClass('noscroll');
   });
 });

@@ -70,6 +70,11 @@
         visibility: visible;
       }
     }
+    .goals__item-desc {
+      &::before {
+        background-color: #fff;
+      }
+    }
   }
 }
 
@@ -170,11 +175,25 @@
 }
 
 .goals__item-desc {
+  position: relative;
   margin-top: auto;
 
   font-weight: @medium;
   font-size: 1.9rem;
   line-height: 2rem;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -2.6rem;
+    left: 0;
+
+    width: 3.6rem;
+    height: 0.2rem;
+    background-color: #c3c2c8;
+
+    transition: @s;
+  }
 }
 
 @media (max-width: @tablet-width) {
@@ -285,7 +304,24 @@
   }
 
   .goals__item-desc {
+    min-height: 5.4rem;
     font-size: 1.4rem;
     line-height: initial;
+    &::before {
+      top: -2rem;
+    }
+  }
+
+  .goals__ruffles {
+    display: none;
+    &-m {
+      display: block;
+    }
+    &-m-1 {
+      bottom: 1.9rem;
+    }
+    &-m-2 {
+      bottom: -1.7rem;
+    }
   }
 }

@@ -126,6 +126,12 @@
   display: none;
 }
 
+.rehabs-swiper__ruffles {
+  &-m {
+    display: none;
+  }
+}
+
 @media (max-width: @tablet-width) {
   .rehabs-swiper {
     padding-top: 7rem;
@@ -190,6 +196,19 @@
 
   .rehabs-swiper__btn-more {
     margin-top: 4rem;
+  }
+
+  .rehabs-swiper__ruffles {
+    display: none;
+    &-m {
+      display: block;
+    }
+    &-m-1 {
+      top: 2.5rem;
+    }
+    &-m-2 {
+      top: 6.4rem;
+    }
   }
 
 }

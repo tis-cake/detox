@@ -61,6 +61,12 @@
 
 .b__tel {}
 
+.b__ruffles {
+  &-m {
+    display: none;
+  }
+}
+
 @media (max-width: @tablet-width) {
   .b {
     padding-top: 5.2rem;
@@ -114,5 +120,18 @@
 
   .b__tel-form {
     margin-top: 1.6rem;
+  }
+
+  .b__ruffles {
+    display: none;
+    &-m {
+      display: block;
+    }
+    &-m-1 {
+      top: -4.3rem;
+    }
+    &-m-2 {
+      top: -2.3rem;
+    }
   }
 }
