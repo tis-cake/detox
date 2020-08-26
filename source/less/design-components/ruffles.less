@@ -2,8 +2,8 @@
 
 .ruffles {
   position: absolute;
-  left: 50%;
-  transform: translateX(var(--translateX)) rotate(var(--rotate)) scale(var(--scale));
+  // left: 50%;
+  transform: rotate(var(--rotate)) scale(var(--scale));
 
   --translateX: -50%;
   --rotate: 0deg;
@@ -213,6 +213,15 @@
   --scale: 0.8;
 }
 
+@media (min-width: @max-desktop-width) {
+
+   html .ruffles {
+    transform: translateX(var(--translateX)) rotate(var(--rotate)) scale(var(--scale));
+    left: 50%;
+    right: auto;
+  }
+}
+
 @media (max-width: @tablet-width) {
   .ruffles-wrap {
     .ruffles {
@@ -222,6 +231,7 @@
 
   .ruffles {
     left: auto;
+    right: auto;
     transform: rotate(var(--rotate)) scale(var(--scale));
   }
 

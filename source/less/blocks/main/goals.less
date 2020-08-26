@@ -196,6 +196,42 @@
   }
 }
 
+.goals__ruffles {
+  &-d {
+    &-1 {
+      top: 18.2rem;
+      left: 9rem;
+    }
+    &-2 {
+      right: 12rem;
+      bottom: 2rem;
+    }
+    &-3 {
+      bottom: -6.7rem;
+      right: 18.6rem;
+    }
+  }
+  &-m {
+    display: none;
+  }
+}
+
+@media (min-width: @max-desktop-width) {
+  .goals__ruffles {
+    &-d {
+      &-1 {
+        --translateX: -870px;
+      }
+      &-2 {
+        --translateX: 825px;
+      }
+      &-3 {
+        --translateX: 755px;
+      }
+    }
+  }
+}
+
 @media (max-width: @tablet-width) {
 
   .goals {
@@ -313,7 +349,9 @@
   }
 
   .goals__ruffles {
-    display: none;
+    &-d {
+      display: none;
+    }
     &-m {
       display: block;
     }

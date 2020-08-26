@@ -62,8 +62,24 @@
 .b__tel {}
 
 .b__ruffles {
+  &-d {
+    &-1 {
+      left: 7rem;
+      bottom: -0.4rem;
+    }
+  }
   &-m {
     display: none;
+  }
+}
+
+@media (min-width: @max-desktop-width) {
+  .b__ruffles {
+    &-d {
+      &-1 {
+        --translateX: -890px;
+      }
+    }
   }
 }
 
@@ -123,7 +139,9 @@
   }
 
   .b__ruffles {
-    display: none;
+    &-d {
+      display: none;
+    }
     &-m {
       display: block;
     }

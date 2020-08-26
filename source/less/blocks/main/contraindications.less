@@ -158,8 +158,38 @@
 }
 
 .contraindications__ruffles {
+  &-d {
+    &-1 {
+      top: 5.7rem;
+      right: 24.7rem;
+    }
+    &-2 {
+      top: 9rem;
+      right: 17.2rem;
+    }
+    &-3 {
+      bottom: 8.5rem;
+      right: 4.5rem;
+    }
+  }
   &-m {
     display: none;
+  }
+}
+
+@media (min-width: @max-desktop-width) {
+  .contraindications__ruffles {
+    &-d {
+      &-1 {
+        --translateX: 700px;
+      }
+      &-2 {
+        --translateX: 768px;
+      }
+      &-3 {
+        --translateX: 884px;
+      }
+    }
   }
 }
 
@@ -275,7 +305,9 @@
   }
 
   .contraindications__ruffles {
-    display: none;
+    &-d {
+      display: none;
+    }
     &-m {
       display: block;
     }

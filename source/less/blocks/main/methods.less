@@ -82,6 +82,29 @@
   &-m {
     display: none;
   }
+  &-d {
+    &-1 {
+      top: 6rem;
+      left: 19rem;
+    }
+    &-2 {
+      top: 12.4rem;
+      left: 13.6rem;
+    }
+  }
+}
+
+@media (min-width: @max-desktop-width) {
+  .methods__ruffles {
+    &-d {
+      &-1 {
+        --translateX: -770px;
+      }
+      &-2 {
+        --translateX: -824px;
+      }
+    }
+  }
 }
 
 @media (max-width: @tablet-width) {
@@ -140,7 +163,9 @@
   }
 
   .methods__ruffles {
-    display: none;
+    &-d {
+      display: none;
+    }
     &-m {
       display: block;
     }
